@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>{{ pagetitle }} - Silex Example</title>
+  
+	<link rel="stylesheet" href="{{ app.request.basepath }}/bootstrap.min.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	
+    <style type="text/css">
+
+      body {
+        padding-top: 70px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+
+      .container {
+        width: 820px;
+      }
+
+      .content .span4 {
+        margin-left: 0;
+        padding-left: 20px;
+      }
+
+      .topbar .btn {
+        border: 0;
+      }
+      
+      h1, h2, h3, h4, h5, h6 { font-weight: 400}
+      
+      form { margin-top: 30px; background-color: #f8f8f8; padding: 15px 0 3px 0}
+      select { width: auto; margin-right: 5px }
+      div.single { margin-left: 150px }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="topbar">
+		<div class="fill">
+			<div class="container">
+				<a class="brand" href="#">Silex Kitchen </a>
+				<ul class="menu">
+					<li><a href="{{ app.url_generator.generate('register') }}">Register</a></li>
+					<li><a href="{{ app.url_generator.generate('validateregistration') }}">Validate account</a></li>
+					<li><a href="{{ app.url_generator.generate('login') }}">Login</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
+
+	<div class="container">
+		<div class="content">
+			<div class="page-header">
+				<h1>{{ pagetitle }}</h1>
+			</div>
+			<div class="row">
+				<div class="span14">
+		    		{% include ('alert.twig') %}
+					{% block content %}{% endblock %}
+				</div>
+
+			</div>
+		</div>
+
+		<footer><p>&copy; Company 2012</p></footer>
+
+    </div> <!-- /container -->
+	
+	
+</body>
+</html>

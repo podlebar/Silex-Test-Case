@@ -1,0 +1,27 @@
+{% if app.session.hasFlash('message') %}
+	<div class="alert-message info">
+		{{ app.session.flash('message')|trans }}
+		<a href="" class="close">&times;</a>
+	</div>
+{% endif %}
+
+{% if app.session.hasFlash('warning') %}
+	<div class="alert-message warning">
+		{{ app.session.flash('warning')|trans }}
+		<a href="" class="close">&times;</a>
+	</div>
+{% endif %}
+
+{% if app.session.hasFlash('error') %}
+	<div class="alert-message error">
+		{{ app.session.flash('error')|trans }}
+		<a href="" class="close">&times;</a>
+	</div>
+{% endif %}
+
+{% if app.session.hasFlash('success') %}
+	<div class="alert-message success">
+		{{ app.session.flash('success')|trans }}
+		<a href="" class="close">&times;</a>
+	</div>
+{% endif %}
