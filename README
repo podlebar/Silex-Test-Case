@@ -1,1 +1,16 @@
-foo
+1:
+<VirtualHost *:80>
+        ServerName www.hackday.dev
+        DocumentRoot "/Library/WebServer/Documents/baba/Silex-Test-Case/web"
+        <Directory "/Library/WebServer/Documents/baba/Silex-Test-Case/web">
+                Options -Indexes FollowSymLinks Includes
+                AllowOverride All
+                Order allow,deny
+                Allow from All
+        </Directory>
+</VirtualHost>
+
+2: git clone
+3: git submodule update --init --recursive
+4: mkdir log
+5: touch development.log
