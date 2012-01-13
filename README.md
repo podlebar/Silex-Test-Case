@@ -7,7 +7,8 @@ Started as a hackday.. ended as something like a Cookbook for Silex.
     git clone git://github.com/podlebar/Silex-Test-Case.git
 
 and
-    cd Silex_Test_Case
+
+    cd Silex-Test-Case
     
 ### Init the Submodules 
     git submodule update --init --recursive
