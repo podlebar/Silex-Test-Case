@@ -1,4 +1,6 @@
-1:
+#Install
+
+## Create VHost
 <VirtualHost *:80>
         ServerName www.hackday.dev
         DocumentRoot "/Library/WebServer/Documents/Silex-Test-Case/web"
@@ -10,12 +12,18 @@
         </Directory>
 </VirtualHost>
 
-2: git clone
-3: git submodule update --init --recursive
-4: mkdir log
-5: touch development.log
-6: create db (silex_test_case for example)
-7:
+## Clone 
+git clone git://github.com/podlebar/Silex-Test-Case.git
+
+## Init the Submodules 
+git submodule update --init --recursive
+
+## Misc
+mkdir log and make sure is't writable
+touch development.log
+## Create MySQL DB
+name it "silex_test_case" for example
+## Create the Table
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(200) NOT NULL,
@@ -26,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `language` char(4) NOT NULL,
   `validated` tinyint(1) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
-8: edit YAML config Files in /config and rename ist to .yml 
+## Config
+Edit YAML Config-Files in /config and rename ist to .yml 
