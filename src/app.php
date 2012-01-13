@@ -11,8 +11,8 @@ $app['autoloader']->registerNamespaces(array(
 $app['autoloader']->registerPrefix('Twig_', __DIR__.'/../vendor/silex/vendor/twig/lib');
 
 $yaml = new Parser();
-$app['provider_config'] = $yaml->parse(file_get_contents(__DIR__.'/../config/provider.yaml'));
-$app['app_config'] = $yaml->parse(file_get_contents(__DIR__.'/../config/app.yaml'));
+$app['provider_config'] = $yaml->parse(file_get_contents(__DIR__.'/../config/provider.yml'));
+$app['app_config'] = $yaml->parse(file_get_contents(__DIR__.'/../config/app.yml'));
 
 // ************************************************
 // Register built in Providers
