@@ -36,42 +36,51 @@
       form { margin-top: 30px; background-color: #f8f8f8; padding: 15px 0 3px 0}
       select { width: auto; margin-right: 5px }
       div.single { margin-left: 150px }
+      
+      ul.profile { float: right !important}
+      ul.profile a { font-weight: bold ;}
 
     </style>
 </head>
 <body>
 <div class="container-fluid">
     <div class="topbar">
-		<div class="fill">
-			<div class="container">
-				<a class="brand" href="#">Silex Kitchen </a>
-				<ul class="menu">
-					<li><a href="{{ app.url_generator.generate('register') }}">Register</a></li>
-					<li><a href="{{ app.url_generator.generate('validateregistration') }}">Validate account</a></li>
-					<li><a href="{{ app.url_generator.generate('login') }}">Login</a></li>
-				</ul>
-			</div>
-		</div>
+        <div class="fill">
+            <div class="container">
+                <a class="brand" href="{{ app.url_generator.generate('homepage') }}">Silex Kitchen </a>
+                <ul class="menu">
+                    <li><a href="{{ app.url_generator.generate('register') }}">Register</a></li>
+                    <li><a href="{{ app.url_generator.generate('validateregistration') }}">Validate account</a></li>
+                    <li><a href="{{ app.url_generator.generate('login') }}">Login</a></li>
+                </ul>
+
+                {% set session = app.session.get('user') %}
+                {% if session|length > 0  %}
+                <ul class="profile">
+                    <li><a href="#">You are logged in as {{ session.username }}</a></li>
+                    <li><a href="{{ app.url_generator.generate('logout') }}">(Logout)</a></li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
     </div>
 
-	<div class="container">
-		<div class="content">
-			<div class="page-header">
-				<h1>{{ pagetitle }}</h1>
-			</div>
-			<div class="row">
-				<div class="span14">
-		    		{% include ('alert.twig') %}
-					{% block content %}{% endblock %}
-				</div>
+    <div class="container">
+        <div class="content">
+            <div class="page-header">
+                <h1>{{ pagetitle }}</h1>
+            </div>
+            <div class="row">
+                <div class="span14">
+                    {% include ('alert.twig') %}
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
 
-			</div>
-		</div>
-
-		<footer><p>&copy; Company 2012</p></footer>
+        <footer><p>&copy; Company 2012</p></footer>
 
     </div> <!-- /container -->
-	
-	
+
 </body>
 </html>

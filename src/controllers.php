@@ -1,9 +1,6 @@
 <?php
 $app->match('/', function() use ($app) {
-
-    return $app['twig']->render('welcome.twig', array(
-        'pagetitle' => 'Welcome',
-    ));
+    return $app['twig']->render('welcome.twig');
 })->bind('homepage');
 
 

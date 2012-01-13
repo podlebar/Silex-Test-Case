@@ -3,5 +3,16 @@
 {% extends layout %}
 
 {% block content %}
-login
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+<form method="post" action="{{ app.url_generator.generate('login') }}" novalidate {{ form_enctype(form) }}>
+
+     {{ form_widget(form, { 'attr': {'class': 'login'} }) }}
+    
+    <div class="clearfix  ">
+        <div class="input"><input type="submit" value="Login" id="send" name="send" class="btn small primary"></div>
+    </div>
+    {{ form_rest(form) }}
+</form>
+
 {% endblock %}

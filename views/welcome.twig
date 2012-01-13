@@ -1,3 +1,6 @@
+{% set pagetitle = 'Welcome' %}
+
+
 {% extends layout %}
 
 {% block content %}
@@ -5,9 +8,9 @@
 
 <p>A microframework provides the guts for building simple single-file apps. Silex aims to be:
 <ul>
-	<li>Concise: Silex exposes an intuitive and concise API that is fun to use.</li>
-	<li>Extensible: Silex has an extension system based around the Pimple micro service-container that makes it even easier to tie in third party libraries.</li>
-	<li>Testable: Silex uses Symfony2's HttpKernel which abstracts request and response. This makes it very easy to test apps and the framework itself. It also respects the HTTP specification and encourages its proper use.</li>
+    <li>Concise: Silex exposes an intuitive and concise API that is fun to use.</li>
+    <li>Extensible: Silex has an extension system based around the Pimple micro service-container that makes it even easier to tie in third party libraries.</li>
+    <li>Testable: Silex uses Symfony2's HttpKernel which abstracts request and response. This makes it very easy to test apps and the framework itself. It also respects the HTTP specification and encourages its proper use.</li>
 </ul>
 </p>
 {% endblock %}

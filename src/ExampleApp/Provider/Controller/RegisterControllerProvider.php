@@ -49,7 +49,7 @@ class RegisterControllerProvider implements ControllerProviderInterface
             $form = $builder
                 ->add('username', 'text', array('label' => 'Username:'))
                 ->add('email', 'email', array('label' => 'Email:'))
-                ->add('password', 'password', array('label' => 'Password'))
+                ->add('password', 'password', array('label' => 'Password:'))
                 ->add('birthdate', 'date', array(
                     'input'  => 'string',
                     'widget' => 'choice',
@@ -154,11 +154,12 @@ class RegisterControllerProvider implements ControllerProviderInterface
 
         $controllers->get('/validate/{code}', function($code) use ($app) {
             $sql = "SELECT username ,userhash FROM user WHERE userhash = ? AND validated = 0";
-            $post = $app['db']->fetchAssoc($sql, array($code));	
+            $post = $app['db']->fetchAssoc($sql, array($code));
+            
             if(!$post) {
                 $app['session']->setFlash('error', 'could not validate');
             } else {
-                $app['session']->setFlash('success', 'validate user' . $post['username']);
+                $app['session']->setFlash('success', 'validate user ' . $post['username']);
                 $app['db']->update('user', array('validated' => '1'), array('userhash' => $code));
             }
 

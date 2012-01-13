@@ -15,7 +15,7 @@ and
 
 ### Create VHost
     <VirtualHost *:80>
-            ServerName www.hackday.dev
+            ServerName www.silex-test-case.local
             DocumentRoot "/Library/WebServer/Documents/Silex-Test-Case/web"
             <Directory "/Library/WebServer/Documents/Silex-Test-Case/web">
                     Options -Indexes FollowSymLinks Includes
@@ -24,6 +24,11 @@ and
                     Allow from All
             </Directory>
     </VirtualHost>
+    
+Don't forget to add the url (silex-test-case.local) to your hosts file 
+
+## Config
+Edit YAML Config-Files in /config and rename ist to .yml
         
 ### Misc
     mkdir log
@@ -39,7 +44,7 @@ Create the folder for uploads
 ..and make sure it's writable
 
 ### Create MySQL DB
-name it "silex_test_case" for example
+name it "silex_test_case" or what you defined it in your app.yml
 
 ### Create the Table
     CREATE TABLE IF NOT EXISTS `user` (
@@ -54,5 +59,3 @@ name it "silex_test_case" for example
       PRIMARY KEY (`user_id`)
     ) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
-## Config
-Edit YAML Config-Files in /config and rename ist to .yml 
