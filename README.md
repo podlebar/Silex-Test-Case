@@ -18,12 +18,24 @@ Started as a hackday.. ended as something like a Cookbook for Silex.
 ### Clone 
     git clone git://github.com/podlebar/Silex-Test-Case.git
 
+and
+    cd silex_test_case
+    
 ### Init the Submodules 
     git submodule update --init --recursive
 
 ### Misc
-mkdir log and make sure is't writable
-touch development.log
+    mkdir log
+    
+..and make sure it's writable
+
+    touch development.log
+    
+Create the folder for uploads
+
+    mkdir web/uploads
+    
+..and make sure it's writable
 
 ### Create MySQL DB
 name it "silex_test_case" for example
