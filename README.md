@@ -3,6 +3,15 @@ Started as a hackday.. ended as something like a Cookbook for Silex.
 
 ## Setup
 
+### Clone 
+    git clone git://github.com/podlebar/Silex-Test-Case.git
+
+and
+    cd Silex_Test_Case
+    
+### Init the Submodules 
+    git submodule update --init --recursive
+
 ### Create VHost
     <VirtualHost *:80>
             ServerName www.hackday.dev
@@ -14,16 +23,7 @@ Started as a hackday.. ended as something like a Cookbook for Silex.
                     Allow from All
             </Directory>
     </VirtualHost>
-
-### Clone 
-    git clone git://github.com/podlebar/Silex-Test-Case.git
-
-and
-    cd silex_test_case
-    
-### Init the Submodules 
-    git submodule update --init --recursive
-
+        
 ### Misc
     mkdir log
     
