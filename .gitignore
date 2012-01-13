@@ -1,5 +1,7 @@
 .DS_Store
 *.log
+/config/app.yml
+/config/provider.yml
 /log/development.log
 /web/uploads/*
 *.esproj

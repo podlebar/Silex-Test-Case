@@ -1,0 +1,14 @@
+doctrine:
+    user: root
+    password:
+    host: localhost
+    db: silex_test_case
+    driver: pdo_mysql
+    
+swiftmailer:
+    host: smtp.gmail.com
+    port: 465
+    username: myemail@gmail.com
+    password: thesecret
+    encryption: ssl
+    auth_mode: login
