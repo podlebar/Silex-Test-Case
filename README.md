@@ -10,7 +10,13 @@ and
 
     cd Silex-Test-Case
     
+then
+
+    sh vendors.sh
+    
 ### Init the Submodules 
+
+    cd vendor/silex
     git submodule update --init --recursive
 
 ### Create VHost
@@ -28,14 +34,14 @@ and
 Don't forget to add the url (silex-test-case.local) to your hosts file 
 
 ## Config
-Edit YAML Config-Files in /config and rename ist to .yml
+Edit YAML Config-Files in /config and copy and rename ist to .yml
         
 ### Misc
     mkdir log
     
 ..and make sure it's writable
 
-    touch development.log
+    touch log/development.log
     
 Create the folder for uploads
 
