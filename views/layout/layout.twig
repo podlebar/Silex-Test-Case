@@ -44,11 +44,11 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="topbar">
-        <div class="fill">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
             <div class="container">
                 <a class="brand" href="{{ app.url_generator.generate('homepage') }}">Silex Kitchen </a>
-                <ul class="menu">
+                <ul class="nav">
                     <li><a href="{{ app.url_generator.generate('register') }}">Register</a></li>
                     <li><a href="{{ app.url_generator.generate('validateregistration') }}">Validate account</a></li>
                     <li><a href="{{ app.url_generator.generate('login') }}">Login</a></li>
@@ -56,7 +56,7 @@
 
                 {% set session = app.session.get('user') %}
                 {% if session|length > 0  %}
-                <ul class="profile">
+                <ul class="nav">
                     <li><a href="#">You are logged in as {{ session.username }}</a></li>
                     <li><a href="{{ app.url_generator.generate('logout') }}">(Logout)</a></li>
                 </ul>
