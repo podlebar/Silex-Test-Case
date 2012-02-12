@@ -1,5 +1,0 @@
-email:
-    sendfrom: foo@bar.ch
-    
-uploads:
-    path: /Library/WebServer/Documents/and/so/on
