@@ -1,0 +1,28 @@
+
+body {
+padding-top: 70px; /* 40px to make the container go all the way to the bottom of the topbar */
+}
+
+.container {
+	width: 720px;
+}
+
+.content .span4 {
+	margin-left: 0;
+	padding-left: 20px;
+}
+
+.topbar .btn {
+	border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 400}
+
+form { margin-top: 30px; background-color: #f8f8f8; padding: 15px}
+
+
+select { width: auto; margin-right: 5px }
+div.single { margin-left: 150px }
+
+ul.profile { float: right !important}
+ul.profile a { font-weight: bold ;}

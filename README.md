@@ -1,5 +1,16 @@
-#Silex Example
+#Silex Test Case
 Started as a hackday.. ended as something like a Cookbook for Silex.
+Following Components are used:
+* Session
+* SymfonyBridges
+* Validator
+* Translation
+* Twig
+* UrlGenerator
+* Forms
+* MonologService
+* SwiftMailer
+* Doctrine
 
 ## Setup
 
@@ -37,6 +48,7 @@ Don't forget to add the url (silex-test-case.local) to your hosts file
 Edit YAML Config-Files in /config and copy and rename ist to .yml
         
 ### Misc
+Change back to the project's root directory.
     mkdir log
     
 ..and make sure it's writable

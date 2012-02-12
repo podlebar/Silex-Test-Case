@@ -1,7 +1,14 @@
 .DS_Store
 *.log
+/vendor
 /config/app.yml
 /config/provider.yml
 /log/development.log
 /web/uploads/*
 *.esproj
+
+vendor/Symfony/Bridge/Twig
+vendor/Symfony/Component/Form
+vendor/Symfony/Component/Translation
+vendor/Symfony/Component/Validator
+vendor/Symfony/Component/Yaml
