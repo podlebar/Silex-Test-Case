@@ -2,16 +2,17 @@
 Started as a hackday.. ended as something like a Cookbook for Silex.
 
 Following Components are used:
-- Session
-- SymfonyBridges
-- Validator
-- Translation
-- Twig
-- UrlGenerator
-- Forms
-- MonologService
-- SwiftMailer
-- Doctrine
+
+*	Session
+*	SymfonyBridges
+*	Validator
+*	Translation
+*	Twig
+* 	UrlGenerator
+*	Forms
+*	MonologService
+*	SwiftMailer
+*	Doctrine
 
 ## Setup
 
